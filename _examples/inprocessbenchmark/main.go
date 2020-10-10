@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime/pprof"
 
-	"github.com/AsynkronIT/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/actor"
 
 	"log"
 	"sync"
@@ -13,7 +13,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/mailbox"
+	"github.com/nightwolfz/protoactor-go/mailbox"
 )
 
 type Msg struct {

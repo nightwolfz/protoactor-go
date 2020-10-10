@@ -3,7 +3,7 @@ package actor
 import (
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/eventstream"
+	"github.com/nightwolfz/protoactor-go/eventstream"
 )
 
 // DeciderFunc is a function which is called by a SupervisorStrategy

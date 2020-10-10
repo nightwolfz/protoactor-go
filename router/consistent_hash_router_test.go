@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/router"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/router"
 )
 
 type myMessage struct {

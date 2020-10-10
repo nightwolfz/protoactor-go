@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 	"github.com/AsynkronIT/goconsole"
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/cluster"
-	"github.com/AsynkronIT/protoactor-go/cluster/consul"
-	"github.com/AsynkronIT/protoactor-go/examples/cluster-broadcast/shared"
-	"github.com/AsynkronIT/protoactor-go/remote"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/cluster"
+	"github.com/nightwolfz/protoactor-go/cluster/consul"
+	"github.com/nightwolfz/protoactor-go/examples/cluster-broadcast/shared"
+	"github.com/nightwolfz/protoactor-go/remote"
 	"log"
 	"time"
 )

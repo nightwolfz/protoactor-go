@@ -1,10 +1,10 @@
 package cluster
 
 import (
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/eventstream"
-	"github.com/AsynkronIT/protoactor-go/log"
-	"github.com/AsynkronIT/protoactor-go/remote"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/eventstream"
+	"github.com/nightwolfz/protoactor-go/log"
+	"github.com/nightwolfz/protoactor-go/remote"
 )
 
 var partition *partitionValue

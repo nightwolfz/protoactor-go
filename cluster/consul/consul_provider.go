@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/cluster"
-	"github.com/AsynkronIT/protoactor-go/eventstream"
+	"github.com/nightwolfz/protoactor-go/cluster"
+	"github.com/nightwolfz/protoactor-go/eventstream"
 	"github.com/hashicorp/consul/api"
 )
 

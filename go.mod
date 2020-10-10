@@ -2,6 +2,7 @@ module github.com/nightwolfz/protoactor-go
 
 require (
 	github.com/AsynkronIT/gonet v0.0.0-20161127091928-0553637be225
+	github.com/AsynkronIT/protoactor-go v0.0.0-20200815184336-b225d28383f2
 	github.com/Workiva/go-datastructures v1.0.50
 	github.com/armon/go-metrics v0.3.0 // indirect
 	github.com/chzyer/logex v1.1.10 // indirect

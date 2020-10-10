@@ -3,9 +3,9 @@ package remote
 import (
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/eventstream"
-	"github.com/AsynkronIT/protoactor-go/log"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/eventstream"
+	"github.com/nightwolfz/protoactor-go/log"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

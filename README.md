@@ -1,8 +1,8 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/AsynkronIT/protoactor-go)](https://goreportcard.com/report/github.com/AsynkronIT/protoactor-go) 
-[![GoDoc](https://godoc.org/github.com/AsynkronIT/protoactor-go?status.svg)](https://godoc.org/github.com/AsynkronIT/protoactor-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nightwolfz/protoactor-go)](https://goreportcard.com/report/github.com/nightwolfz/protoactor-go) 
+[![GoDoc](https://godoc.org/github.com/nightwolfz/protoactor-go?status.svg)](https://godoc.org/github.com/nightwolfz/protoactor-go)
 [![Build Status](https://travis-ci.org/AsynkronIT/protoactor-go.svg?branch=dev)](https://travis-ci.org/AsynkronIT/protoactor-go)
 [![Coverage Status](https://coveralls.io/repos/github/AsynkronIT/protoactor-go/badge.svg?branch=dev)](https://coveralls.io/github/AsynkronIT/protoactor-go?branch=dev)
-[![Sourcegraph](https://sourcegraph.com/github.com/AsynkronIT/protoactor-go/-/badge.svg)](https://sourcegraph.com/github.com/AsynkronIT/protoactor-go?badge)
+[![Sourcegraph](https://sourcegraph.com/github.com/nightwolfz/protoactor-go/-/badge.svg)](https://sourcegraph.com/github.com/nightwolfz/protoactor-go?badge)
 
 [![Join the chat at https://gitter.im/AsynkronIT/protoactor](https://badges.gitter.im/AsynkronIT/protoactor.svg)](https://gitter.im/AsynkronIT/protoactor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -95,8 +95,8 @@ You need to ensure that your `$GOPATH` variable is properly set.
 Next, install the [standard protocol buffer implementation](https://github.com/google/protobuf) and run the following commands to get all the necessary tooling:
 
 ```
-go get github.com/AsynkronIT/protoactor-go/...
-cd $GOPATH/src/github.com/AsynkronIT/protoactor-go
+go get github.com/nightwolfz/protoactor-go/...
+cd $GOPATH/src/github.com/nightwolfz/protoactor-go
 go get ./...
 make
 ```
@@ -116,15 +116,15 @@ go test `go list ./... | grep -v consul` | grep -v 'no test files'
 If everything is ok, you will get the output:
 
 ```
-ok  	github.com/AsynkronIT/protoactor-go/actor	0.115s
-ok  	github.com/AsynkronIT/protoactor-go/eventstream	0.020s
-ok  	github.com/AsynkronIT/protoactor-go/internal/queue/goring	2.524s
-ok  	github.com/AsynkronIT/protoactor-go/internal/queue/mpsc	2.385s
-ok  	github.com/AsynkronIT/protoactor-go/log	0.017s
-ok  	github.com/AsynkronIT/protoactor-go/mailbox	2.742s
-ok  	github.com/AsynkronIT/protoactor-go/plugin	1.227s
-ok  	github.com/AsynkronIT/protoactor-go/router	1.836s
-ok  	github.com/AsynkronIT/protoactor-go/stream	0.017s
+ok  	github.com/nightwolfz/protoactor-go/actor	0.115s
+ok  	github.com/nightwolfz/protoactor-go/eventstream	0.020s
+ok  	github.com/nightwolfz/protoactor-go/internal/queue/goring	2.524s
+ok  	github.com/nightwolfz/protoactor-go/internal/queue/mpsc	2.385s
+ok  	github.com/nightwolfz/protoactor-go/log	0.017s
+ok  	github.com/nightwolfz/protoactor-go/mailbox	2.742s
+ok  	github.com/nightwolfz/protoactor-go/plugin	1.227s
+ok  	github.com/nightwolfz/protoactor-go/router	1.836s
+ok  	github.com/nightwolfz/protoactor-go/stream	0.017s
 ```
 
 ## Hello world
@@ -391,7 +391,7 @@ For more examples, see the example folder in this repository.
 
 ## Contributors 
 
-<a href="https://github.com/AsynkronIT/protoactor-go/graphs/contributors">
+<a href="https://github.com/nightwolfz/protoactor-go/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=AsynkronIT/protoactor-go" />
 </a>
 

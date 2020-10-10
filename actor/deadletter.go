@@ -1,8 +1,8 @@
 package actor
 
 import (
-	"github.com/AsynkronIT/protoactor-go/eventstream"
-	"github.com/AsynkronIT/protoactor-go/log"
+	"github.com/nightwolfz/protoactor-go/eventstream"
+	"github.com/nightwolfz/protoactor-go/log"
 )
 
 type deadLetterProcess struct{}

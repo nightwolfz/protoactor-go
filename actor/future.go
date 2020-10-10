@@ -7,7 +7,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/AsynkronIT/protoactor-go/log"
+	"github.com/nightwolfz/protoactor-go/log"
 )
 
 // ErrTimeout is the error used when a future times out before receiving a result.

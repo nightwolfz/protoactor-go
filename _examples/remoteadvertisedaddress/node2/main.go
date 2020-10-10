@@ -2,9 +2,9 @@ package main
 
 import (
 	console "github.com/AsynkronIT/goconsole"
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/examples/remotebenchmark/messages"
-	"github.com/AsynkronIT/protoactor-go/remote"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/examples/remotebenchmark/messages"
+	"github.com/nightwolfz/protoactor-go/remote"
 	"fmt"
 )
 

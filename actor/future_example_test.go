@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/actor"
 )
 
 func ExampleFuture_PipeTo() {

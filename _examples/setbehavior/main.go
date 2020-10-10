@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	console "github.com/AsynkronIT/goconsole"
-	"github.com/AsynkronIT/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/actor"
 )
 
 type Hello struct{ Who string }

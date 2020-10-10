@@ -8,11 +8,11 @@ import (
 	"time"
 
 	console "github.com/AsynkronIT/goconsole"
-	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/examples/remoterouting/messages"
-	"github.com/AsynkronIT/protoactor-go/mailbox"
-	"github.com/AsynkronIT/protoactor-go/remote"
-	"github.com/AsynkronIT/protoactor-go/router"
+	"github.com/nightwolfz/protoactor-go/actor"
+	"github.com/nightwolfz/protoactor-go/examples/remoterouting/messages"
+	"github.com/nightwolfz/protoactor-go/mailbox"
+	"github.com/nightwolfz/protoactor-go/remote"
+	"github.com/nightwolfz/protoactor-go/router"
 )
 
 func main() {

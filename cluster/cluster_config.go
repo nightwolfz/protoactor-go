@@ -3,7 +3,7 @@ package cluster
 import (
 	"time"
 
-	"github.com/AsynkronIT/protoactor-go/remote"
+	"github.com/nightwolfz/protoactor-go/remote"
 )
 
 type ClusterConfig struct {
