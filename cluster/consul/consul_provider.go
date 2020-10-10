@@ -27,11 +27,11 @@ type ConsulProvider struct {
 	knownKinds            []string
 	index                 uint64 // consul blocking index
 	client                *api.Client
-	ttl                   time.Duration
-	refreshTTL            time.Duration
+	TTL                   time.Duration
+	RefreshTTL            time.Duration
 	updateTTLWaitGroup    sync.WaitGroup
-	deregisterCritical    time.Duration
-	blockingWaitTime      time.Duration
+	DeregisterCritical    time.Duration
+	BlockingWaitTime      time.Duration
 	statusValue           cluster.MemberStatusValue
 	statusValueSerializer cluster.MemberStatusValueSerializer
 	clusterError          error
@@ -48,10 +48,10 @@ func NewWithConfig(consulConfig *api.Config) (*ConsulProvider, error) {
 	}
 	p := &ConsulProvider{
 		client:             client,
-		ttl:                3 * time.Second,
-		refreshTTL:         1 * time.Second,
-		deregisterCritical: 60 * time.Second,
-		blockingWaitTime:   20 * time.Second,
+		TTL:                3 * time.Second,
+		RefreshTTL:         1 * time.Second,
+		DeregisterCritical: 60 * time.Second,
+		BlockingWaitTime:   20 * time.Second,
 	}
 	return p, nil
 }
@@ -124,7 +124,7 @@ func (p *ConsulProvider) UpdateTTL() {
 
 			err := blockingUpdateTTLFunc(p)
 			if err == nil {
-				time.Sleep(p.refreshTTL)
+				time.Sleep(p.RefreshTTL)
 				continue
 			}
 
@@ -134,7 +134,7 @@ func (p *ConsulProvider) UpdateTTL() {
 			for id := range services {
 				if id == p.id {
 					log.Println("[CLUSTER] [CONSUL] Service found in consul -> doing nothing")
-					time.Sleep(p.refreshTTL)
+					time.Sleep(p.RefreshTTL)
 					continue OUTER
 				}
 			}
@@ -142,12 +142,12 @@ func (p *ConsulProvider) UpdateTTL() {
 			err = p.registerService()
 			if err != nil {
 				log.Println("[CLUSTER] [CONSUL] Error reregistering service ", err)
-				time.Sleep(p.refreshTTL)
+				time.Sleep(p.RefreshTTL)
 				continue
 			}
 
 			log.Println("[CLUSTER] [CONSUL] Reregistered service in consul")
-			time.Sleep(p.refreshTTL)
+			time.Sleep(p.RefreshTTL)
 		}
 	}()
 }
@@ -182,8 +182,8 @@ func (p *ConsulProvider) registerService() error {
 			"StatusValue": p.statusValueSerializer.Serialize(p.statusValue),
 		},
 		Check: &api.AgentServiceCheck{
-			DeregisterCriticalServiceAfter: p.deregisterCritical.String(),
-			TTL:                            p.ttl.String(),
+			DeregisterCriticalServiceAfter: p.DeregisterCritical.String(),
+			TTL:                            p.TTL.String(),
 		},
 	}
 	return p.client.Agent().ServiceRegister(s)
@@ -201,7 +201,7 @@ func (p *ConsulProvider) blockingStatusChange() {
 func (p *ConsulProvider) notifyStatuses() {
 	statuses, meta, err := p.client.Health().Service(p.clusterName, "", false, &api.QueryOptions{
 		WaitIndex: p.index,
-		WaitTime:  p.blockingWaitTime,
+		WaitTime:  p.BlockingWaitTime,
 	})
 	if err != nil {
 		log.Printf("Error %v", err)
