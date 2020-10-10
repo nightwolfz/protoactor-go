@@ -1,4 +1,4 @@
-module github.com/AsynkronIT/protoactor-go
+module github.com/nightwolfz/protoactor-go
 
 require (
 	github.com/AsynkronIT/gonet v0.0.0-20161127091928-0553637be225
