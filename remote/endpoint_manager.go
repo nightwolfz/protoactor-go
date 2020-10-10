@@ -23,6 +23,7 @@ type endpoint struct {
 }
 
 type endpointManagerValue struct {
+	sync.Mutex
 	connections        *sync.Map
 	config             *remoteConfig
 	endpointSupervisor *actor.PID
@@ -115,6 +116,8 @@ func (em *endpointManagerValue) ensureConnected(address string) *endpoint {
 		e, _ = em.connections.LoadOrStore(address, el)
 	}
 
+	em.Lock()
+	defer em.Unlock()
 	el := e.(*endpointLazy)
 	return el.valueFunc()
 }
